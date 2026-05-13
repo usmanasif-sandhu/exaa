@@ -24,22 +24,22 @@ const milestones = [
 export default function About() {
   return (
     <>
-      <div className="border-b border-exaa-900/10 bg-exaa-900 py-14 text-white sm:py-16">
+      <div className="border-b border-exaa-200/80 bg-gradient-to-br from-exaa-100 via-exaa-50 to-white py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent-400">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
             About Exaa
           </p>
-          <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight text-exaa-900 sm:text-5xl">
             Knowledge, kindness, courage — the footprints we nurture nationwide.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-exaa-100/85">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-exaa-700">
             Built with the same institutional depth you see on leading Pakistani education portals —
             clear story, leadership voice, and transparent family journeys — tailored for The Exaa
             Schools.
           </p>
           <Link
             to="/admissions"
-            className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-accent-500 px-5 py-3 text-sm font-bold text-exaa-950"
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-500"
           >
             Plan your visit
             <ArrowRight className="size-4" aria-hidden />
@@ -89,7 +89,7 @@ export default function About() {
                 <span className="font-display text-xs font-bold uppercase tracking-wider text-accent-600">
                   {m.year}
                 </span>
-                <p className="mt-2 font-display text-xl font-bold text-exaa-950">{m.title}</p>
+                <p className="mt-2 font-display text-xl font-bold text-exaa-900">{m.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-exaa-900/70">{m.text}</p>
               </li>
             ))}
@@ -97,7 +97,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-exaa-900 py-16 text-exaa-100 sm:py-20">
+      <section className="border-t border-exaa-200/70 bg-gradient-to-b from-exaa-100/70 to-exaa-50 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Standards"
@@ -123,10 +123,10 @@ export default function About() {
                 icon: Heart,
               },
             ].map((c) => (
-              <div key={c.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <c.icon className="size-8 text-accent-400" aria-hidden />
-                <h3 className="mt-4 font-display text-lg font-bold text-white">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-exaa-100/75">{c.text}</p>
+              <div key={c.title} className="rounded-3xl border border-exaa-200/90 bg-white p-6 shadow-sm">
+                <c.icon className="size-8 text-accent-600" aria-hidden />
+                <h3 className="mt-4 font-display text-lg font-bold text-exaa-900">{c.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-exaa-700">{c.text}</p>
               </div>
             ))}
           </div>

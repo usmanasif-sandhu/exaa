@@ -7,12 +7,11 @@ export default function Campuses() {
     <>
       <div className="border-b border-exaa-900/10 bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-exaa-950 sm:text-5xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-exaa-900 sm:text-5xl">
             Campuses
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-900/70">
-            Branch-first structure like Allied’s locator and TMUC’s multi-city contact pages — each card
-            is a miniature “campus home” until you add maps API or embedded Google Maps iframes.
+            Find the Exaa school nearest to you.
           </p>
         </div>
       </div>
@@ -22,7 +21,7 @@ export default function Campuses() {
           <SectionHeading
             eyebrow="Network"
             title="Find the Exaa school nearest to you"
-            subtitle="Replace placeholder cities with your official list. Phone numbers can differ per branch in siteContent.js."
+            subtitle="Call the branch or head office for directions; add full street addresses in siteContent.js when ready."
           />
           <ul className="mt-12 grid gap-6 md:grid-cols-2">
             {campuses.map((c) => (
@@ -48,7 +47,7 @@ export default function Campuses() {
                 <div className="mt-6 flex flex-wrap gap-3 border-t border-exaa-900/10 pt-5">
                   <a
                     href={brand.phoneTel}
-                    className="inline-flex items-center gap-2 rounded-xl bg-exaa-900 px-4 py-2 text-xs font-bold text-white hover:bg-exaa-800"
+                    className="inline-flex items-center gap-2 rounded-xl bg-accent-600 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-accent-500"
                   >
                     <Phone className="size-3.5" aria-hidden />
                     {c.phone}
@@ -69,10 +68,10 @@ export default function Campuses() {
         </div>
       </section>
 
-      <section className="border-t border-exaa-900/10 bg-exaa-900 py-12 text-center text-exaa-100">
+      <section className="border-t border-exaa-200/80 bg-exaa-100/80 py-12 text-center text-exaa-800">
         <p className="text-sm">
           Head office helpline mirroring national chains:{' '}
-          <a href={brand.phoneTel} className="font-bold text-accent-400 hover:underline">
+          <a href={brand.phoneTel} className="font-semibold text-accent-700 hover:underline">
             {brand.phone}
           </a>
         </p>

@@ -24,12 +24,13 @@ const levels = [
 export default function Academics() {
   return (
     <>
-      <div className="border-b border-exaa-900/10 bg-gradient-to-br from-exaa-900 to-exaa-950 py-14 text-white sm:py-16">
+      <div className="border-b border-exaa-200/80 bg-gradient-to-br from-exaa-100 via-exaa-50 to-white py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Academics</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-100/85">
-            Qualification-style clarity like Roots — early years through senior — mapped to Exaa’s six
-            delivery pillars so parents always know what their child experiences each week.
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-exaa-900 sm:text-5xl">
+            Academics
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-700">
+            The Exaa School System is a Montessori-inspired school system that provides a comprehensive education for students from early years to senior preparation.
           </p>
         </div>
       </div>
@@ -77,7 +78,7 @@ export default function Academics() {
           <div className="mt-12 flex justify-center">
             <Link
               to="/admissions"
-              className="inline-flex items-center gap-2 rounded-2xl bg-exaa-900 px-5 py-3 text-sm font-bold text-white hover:bg-exaa-800"
+              className="inline-flex items-center gap-2 rounded-2xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-500"
             >
               Download prospectus (add PDF later)
               <ArrowRight className="size-4" aria-hidden />

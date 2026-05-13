@@ -24,24 +24,23 @@ export default function Admissions() {
 
   return (
     <>
-      <div className="border-b border-exaa-900/10 bg-exaa-900 py-14 text-white sm:py-16">
+      <div className="border-b border-exaa-200/80 bg-gradient-to-br from-exaa-100 via-exaa-50 to-white py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Admissions</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-100/85">
-            Single admissions hub in the style of PGC / Allied — process, criteria, and next action in
-            one scan. No account system needed; swap forms for real PDFs or WhatsApp deep links later.
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-exaa-900 sm:text-5xl">Admissions</h1>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-700">
+            Plan your visit to the Exaa school nearest to you.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={brand.phoneTel}
-              className="inline-flex items-center gap-2 rounded-2xl bg-accent-500 px-5 py-3 text-sm font-bold text-exaa-950"
+              className="inline-flex items-center gap-2 rounded-xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-500"
             >
               <Phone className="size-4" aria-hidden />
               Speak to admissions
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/25 bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15"
+              className="inline-flex items-center gap-2 rounded-xl border border-exaa-300/90 bg-white px-5 py-3 text-sm font-semibold text-exaa-800 shadow-sm hover:border-accent-400"
               onClick={(e) => e.preventDefault()}
             >
               <FileDown className="size-4" aria-hidden />
@@ -64,10 +63,10 @@ export default function Admissions() {
                 key={s.step}
                 className="relative rounded-3xl border border-exaa-900/10 bg-exaa-50/80 p-6 pt-10 shadow-sm"
               >
-                <span className="absolute left-6 top-0 -translate-y-1/2 rounded-full bg-accent-500 px-3 py-1 font-display text-sm font-bold text-exaa-950">
+                <span className="absolute left-6 top-0 -translate-y-1/2 rounded-full bg-accent-600 px-3 py-1 font-display text-sm font-semibold text-white shadow-sm">
                   Step {s.step}
                 </span>
-                <h2 className="font-display text-xl font-bold text-exaa-950">{s.title}</h2>
+                <h2 className="font-display text-xl font-bold text-exaa-900">{s.title}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-exaa-900/75">{s.text}</p>
               </li>
             ))}
@@ -83,8 +82,8 @@ export default function Admissions() {
               title="Discount and campaigns"
               subtitle="One announcement surface — avoid repeating the same strip up and down the homepage."
             />
-            <div className="mt-8 rounded-3xl border border-accent-500/40 bg-white p-6 shadow-md">
-              <p className="font-display text-3xl font-bold text-exaa-950">Up to 40% off</p>
+            <div className="mt-8 rounded-3xl border border-accent-200/90 bg-white p-6 shadow-md">
+              <p className="font-display text-3xl font-bold text-exaa-900">Up to 40% off</p>
               <p className="mt-2 text-sm font-semibold text-accent-700">
                 With complimentary admission — verify eligibility at campus.
               </p>

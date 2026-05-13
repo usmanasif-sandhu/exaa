@@ -1,47 +1,26 @@
 import SectionHeading from '../components/SectionHeading'
 import { Mic, Palette, Shield, Trophy, Users2 } from 'lucide-react'
+import { studentLifeBlocks } from '../data/siteContent'
 
-const blocks = [
-  {
-    title: 'Performing arts & oratory',
-    text: 'Inter-campus Naat, Qirat, Urdu and English debates, and drama — confidence on stage translates to leadership in class.',
-    icon: Mic,
-  },
-  {
-    title: 'Athletics & self-defence',
-    text: 'Structured PE, inter-house fixtures, and martial-arts style discipline supervised by trained staff.',
-    icon: Trophy,
-  },
-  {
-    title: 'Service & houses',
-    text: 'House systems and service projects build collaboration — similar cadence to Roots’ societies without extra login friction.',
-    icon: Users2,
-  },
-  {
-    title: 'Safe climate',
-    text: 'Published anti-bullying norms, visitor protocols, and staff supervision ratios appropriate to age bands.',
-    icon: Shield,
-  },
-  {
-    title: 'Creative studios',
-    text: 'Art, craft, and display weeks let younger learners narrate learning through colour and construction.',
-    icon: Palette,
-  },
-]
+const icons = {
+  mic: Mic,
+  trophy: Trophy,
+  users: Users2,
+  shield: Shield,
+  palette: Palette,
+}
 
 export default function StudentLife() {
   return (
     <>
-      <div className="border-b border-exaa-900/10 bg-gradient-to-r from-exaa-800 to-exaa-900 py-14 text-white sm:py-16">
+      <section className="border-b border-exaa-200/80 bg-gradient-to-r from-exaa-100 via-exaa-50 to-white py-14 text-exaa-900 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Student life</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-100/85">
-            Holistic pages like TMUC’s “Life at” hubs — highlights beyond transcripts so prospective
-            families sense the rhythm of your week.
+          <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">Student life</h1>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-700">
+            The Exaa School System is a Montessori-inspired school system that provides a comprehensive education for students from early years to senior preparation.
           </p>
         </div>
-      </div>
-
+      </section>
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -51,16 +30,36 @@ export default function StudentLife() {
             align="center"
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {blocks.map((b) => (
-              <article
-                key={b.title}
-                className="rounded-3xl border border-exaa-900/10 bg-exaa-50/60 p-6 transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <b.icon className="size-8 text-accent-500" aria-hidden />
-                <h2 className="mt-4 font-display text-lg font-bold text-exaa-950">{b.title}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-exaa-900/75">{b.text}</p>
-              </article>
-            ))}
+            {studentLifeBlocks.map((b) => {
+              const Icon = icons[b.icon]
+              return (
+                <article
+                  key={b.title}
+                  className="group overflow-hidden rounded-3xl border border-exaa-900/10 bg-exaa-50/60 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <div className="relative aspect-[16/11] overflow-hidden bg-exaa-200/35">
+                    <img
+                      src={b.image}
+                      alt={b.imageAlt}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                      width={960}
+                      height={660}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-exaa-950/25 via-transparent to-transparent"
+                      aria-hidden
+                    />
+                  </div>
+                  <div className="p-6">
+                    <Icon className="size-8 text-accent-500" aria-hidden />
+                    <h2 className="mt-4 font-display text-lg font-bold text-exaa-950">{b.title}</h2>
+                    <p className="mt-2 text-sm leading-relaxed text-exaa-900/75">{b.text}</p>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>

@@ -3,16 +3,19 @@ import { useEffect, useRef, useState } from 'react'
 /**
  * Scroll-triggered fade / lift. Respects prefers-reduced-motion.
  */
+function motionReduced() {
+  return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
 export default function Reveal({ children, className = '', delay = 0, threshold = 0.1 }) {
   const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(motionReduced)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(true)
+    if (motionReduced()) {
       return
     }
 

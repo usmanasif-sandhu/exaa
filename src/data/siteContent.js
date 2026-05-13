@@ -1,8 +1,86 @@
 /** Central copy & config — edit here to update the whole site (no backend). */
 
+import academiaImg from '../assets/academia.jpeg'
+import culturalImg from '../assets/cultural.jpeg'
+import montessoriImg from '../assets/montessori.jpeg'
+import prizeImg from '../assets/prize distribution.jpeg'
+import sportsImg from '../assets/sports.jpeg'
+import culturalStudentImg from '../assets/cultural 2.jpeg'
+import intercampusImg from '../assets/intercampuses competetion.jpeg'
+import montessoriLifeImg from '../assets/montessori 1.jpeg'
+import qiratNaatImg from '../assets/qirat naat competetion.jpeg'
+import sportsLifeImg from '../assets/sports 1.jpeg'
+
+/** Hero right-column carousel — order and copy editable here */
+export const heroCarouselSlides = [
+  {
+    src: montessoriImg,
+    alt: 'Young learners in Montessori activities at an Exaa classroom',
+  },
+  {
+    src: academiaImg,
+    alt: 'Students engaged in academics at Exaa',
+  },
+  {
+    src: culturalImg,
+    alt: 'Cultural and creative student life at Exaa',
+  },
+  {
+    src: sportsImg,
+    alt: 'Sports and physical education at Exaa',
+  },
+  {
+    src: prizeImg,
+    alt: 'Students celebrating achievement at Exaa',
+  },
+]
+
+/** Student life — one image per pillar (shown on /student-life) */
+export const studentLifeBlocks = [
+  {
+    icon: 'mic',
+    title: 'Performing arts & oratory',
+    text:
+      'Inter-campus Naat, Qirat, Urdu and English debates, and drama — confidence on stage translates to leadership in class.',
+    image: qiratNaatImg,
+    imageAlt: 'Students taking part in naat and qirat competitions on campus.',
+  },
+  {
+    icon: 'trophy',
+    title: 'Athletics & self-defence',
+    text:
+      'Structured PE, inter-house fixtures, and martial-arts style discipline supervised by trained staff.',
+    image: sportsLifeImg,
+    imageAlt: 'Students in structured sports and physical education.',
+  },
+  {
+    icon: 'users',
+    title: 'Service & houses',
+    text:
+      'House systems and service projects build collaboration — similar cadence to Roots’ societies without extra login friction.',
+    image: intercampusImg,
+    imageAlt: 'Students at an inter-campus competition.',
+  },
+  {
+    icon: 'shield',
+    title: 'Safe climate',
+    text:
+      'Published anti-bullying norms, visitor protocols, and staff supervision ratios appropriate to age bands.',
+    image: montessoriLifeImg,
+    imageAlt: 'Young learners in a supervised, welcoming classroom.',
+  },
+  {
+    icon: 'palette',
+    title: 'Creative studios',
+    text: 'Art, craft, and display weeks let younger learners narrate learning through colour and construction.',
+    image: culturalStudentImg,
+    imageAlt: 'Students engaged in arts and cultural activities.',
+  },
+]
+
 export const brand = {
-  name: 'The Exaa School system',
-  tagline: 'A National Wake Field',
+  name: 'The Exaa School System',
+  tagline: 'A national wake field',
   phone: '053-3728614',
   phoneTel: 'tel:+92533728614',
   email: 'myexaa@gmail.com',
@@ -10,6 +88,41 @@ export const brand = {
   /** WhatsApp number (any common format); floating button uses wa.me after normalization. */
   whatsapp: '+923171700440',
 }
+
+/**
+ * Rotating copy for the Home announcement strip — edit lines or add slides here.
+ * Use `{session}` anywhere in `line`; it expands to Session Y–Y+1.
+ */
+export const announcementSlides = [
+  {
+    id: 'admissions',
+    emphasis: 'Admissions open',
+    line: '{session}: speak to your nearest campus or ',
+    link: { to: '/admissions', label: 'view the process' },
+    suffix: '.',
+  },
+  {
+    id: 'campuses',
+    emphasis: 'National network',
+    line: 'Find addresses, timings, and contact details for each branch — ',
+    link: { to: '/campuses', label: 'explore campuses' },
+    suffix: '.',
+  },
+  {
+    id: 'contact',
+    emphasis: "We're here to help",
+    line: 'Office hours and direct lines for families — ',
+    link: { to: '/contact', label: 'get in touch' },
+    suffix: '.',
+  },
+  {
+    id: 'life',
+    emphasis: 'Student life',
+    line: 'Performing arts, sport, societies, and campus rhythm — ',
+    link: { to: '/student-life', label: 'see what happens beyond class' },
+    suffix: '.',
+  },
+]
 
 export const hours = [
   { label: 'Monday – Saturday', value: '8:00 a.m. – 1:30 p.m.' },
@@ -127,32 +240,74 @@ export const events = [
 
 export const campuses = [
   {
-    city: 'Lahore',
-    area: 'Model Town',
-    address: 'Exaa School, Model Town — update with full street address',
+    city: 'Shadman',
+    area: 'Main Campus',
+    address: 'The Exaa School System, Shadman — add street address and landmark',
     phone: brand.phone,
-    slug: 'lahore-model-town',
+    slug: 'Gujrat-shadman-main',
   },
   {
-    city: 'Faisalabad',
-    area: 'Peoples Colony',
-    address: 'Exaa School, Peoples Colony — update with full street address',
+    city: 'Lalamusa',
+    area: 'Main GT Road',
+    address: 'The Exaa School System, Lalamusa — add street address',
     phone: brand.phone,
-    slug: 'faisalabad-peoples-colony',
+    slug: 'lalamusa',
   },
   {
-    city: 'Multan',
-    area: 'Gulgasht',
-    address: 'Exaa School, Gulgasht — update with full street address',
+    city: 'Kunjah',
+    area: 'Sargodah Road',
+    address: 'The Exaa School System, Kunjah — add street address',
     phone: brand.phone,
-    slug: 'multan-gulgasht',
+    slug: 'kunjah',
   },
   {
-    city: 'Islamabad',
-    area: 'Satellite Town',
-    address: 'Exaa School, Satellite Town — update with full street address',
+    city: 'Lakhanwal',
+    area: '',
+    address: 'The Exaa School System, Lakhanwal — add street address',
     phone: brand.phone,
-    slug: 'islamabad-satellite-town',
+    slug: 'lakhanwal',
+  },
+  {
+    city: 'Faateh',
+    area: 'Factory Area Road',
+    address: 'The Exaa School System, Faateh campus — add street address',
+    phone: brand.phone,
+    slug: 'faateh',
+  },
+  {
+    city: 'Wazirabad',
+    area: 'Ahad campus',
+    address: 'The Exaa School System, Ahad campus, Wazirabad',
+    phone: brand.phone,
+    slug: 'wazirabad-ahad',
+  },
+  {
+    city: 'Fateh Pur',
+    area: 'Kharian-Jalalpur Road',
+    address: 'The Exaa School System, Fateh Pur',
+    phone: brand.phone,
+    slug: 'fateh-pur',
+  },
+  {
+    city: 'Mangowal',
+    area: 'Eman Campus',
+    address: 'The Exaa School System, Mangowal',
+    phone: brand.phone,
+    slug: 'mangowal',
+  },
+  {
+    city: 'Shaheen',
+    area: 'Shaheen Chowk Gujrat',
+    address: 'The Exaa School System, Shaheen campus',
+    phone: brand.phone,
+    slug: 'shaheen',
+  },
+  {
+    city: 'Parhianwali',
+    area: 'Gujrat-Sargodah Road',
+    address: 'The Exaa School System, Parhianwali',
+    phone: brand.phone,
+    slug: 'parhianwali',
   },
 ]
 
@@ -182,8 +337,6 @@ export const footerColumns = [
   },
 ]
 
-export const heroImage =
-  'https://images.unsplash.com/photo-1580582932707-520edd937bd0?auto=format&fit=crop&w=2000&q=80'
+export const heroImage = academiaImg
 
-export const secondaryImage =
-  'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80'
+export const secondaryImage = montessoriImg

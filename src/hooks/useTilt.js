@@ -5,14 +5,16 @@ import { useCallback, useEffect, useRef, useState } from 'react'
  */
 export function useTilt(maxDegrees = 11) {
   const ref = useRef(null)
-  const [reduce, setReduce] = useState(true)
+  const [reduce, setReduce] = useState(
+    () =>
+      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
   const [t, setT] = useState(
     'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)',
   )
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setReduce(mq.matches)
     const fn = () => setReduce(mq.matches)
     mq.addEventListener('change', fn)
     return () => mq.removeEventListener('change', fn)

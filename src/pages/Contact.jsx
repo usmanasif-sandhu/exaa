@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SectionHeading from '../components/SectionHeading'
-import { brand, hours } from '../data/siteContent'
+import { brand, campuses, hours } from '../data/siteContent'
 import { Mail, MapPin, Phone, Send } from 'lucide-react'
 
 export default function Contact() {
@@ -15,7 +15,7 @@ export default function Contact() {
     <>
       <div className="border-b border-exaa-900/10 bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-exaa-950 sm:text-5xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-exaa-900 sm:text-5xl">
             Contact
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-exaa-900/70">
@@ -61,13 +61,13 @@ export default function Contact() {
               </li>
             </ul>
 
-            <div className="mt-8 rounded-2xl border border-exaa-900/10 bg-exaa-900 p-5 text-sm text-exaa-100">
-              <p className="font-display font-semibold text-white">Office hours</p>
+            <div className="mt-8 rounded-2xl border border-exaa-200/90 bg-white p-5 text-sm shadow-sm">
+              <p className="font-display font-semibold text-exaa-900">Office hours</p>
               <ul className="mt-3 space-y-2">
                 {hours.map((h) => (
                   <li key={h.label} className="flex justify-between gap-4">
-                    <span className="text-exaa-100/75">{h.label}</span>
-                    <span>{h.value}</span>
+                    <span className="text-exaa-600">{h.label}</span>
+                    <span className="font-medium text-exaa-800">{h.value}</span>
                   </li>
                 ))}
               </ul>
@@ -109,12 +109,13 @@ export default function Contact() {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      Select a city
+                      Select a campus
                     </option>
-                    <option>Lahore</option>
-                    <option>Faisalabad</option>
-                    <option>Multan</option>
-                    <option>Islamabad</option>
+                    {campuses.map((c) => (
+                      <option key={c.slug} value={c.slug}>
+                        {c.city} · {c.area}
+                      </option>
+                    ))}
                   </select>
                 </label>
                 <label className="block text-sm font-medium text-exaa-900 sm:col-span-2">
@@ -128,13 +129,13 @@ export default function Contact() {
                 </label>
               </div>
               {sent ? (
-                <p className="mt-4 rounded-xl bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800">
+                <p className="mt-4 rounded-xl border border-exaa-200/80 bg-exaa-100 px-4 py-3 text-sm font-medium text-exaa-800">
                   Thanks — in production this would submit to your server, inbox, or WhatsApp bot.
                 </p>
               ) : null}
               <button
                 type="submit"
-                className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-accent-500 px-5 py-3 text-sm font-bold text-exaa-950 hover:bg-accent-400"
+                className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-accent-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-500"
               >
                 <Send className="size-4" aria-hidden />
                 Submit (demo)
