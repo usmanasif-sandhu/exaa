@@ -10,6 +10,7 @@ const nav = [
   { to: '/admissions', label: 'Admissions' },
   { to: '/campuses', label: 'Campuses' },
   { to: '/student-life', label: 'Student life' },
+  { to: '/calendar', label: 'Calendar' },
 ]
 
 export default function Header() {

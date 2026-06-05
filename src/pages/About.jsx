@@ -1,4 +1,6 @@
 import SectionHeading from '../components/SectionHeading'
+import PoliceMouCard from '../components/PoliceMouCard'
+import Reveal from '../components/Reveal'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Award, Heart, Lightbulb, Users } from 'lucide-react'
 import { secondaryImage } from '../data/siteContent'
@@ -130,6 +132,21 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-exaa-200/70 bg-exaa-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Official partnership"
+              title="MOU with Punjab Police, Gujrat"
+              subtitle="A published memorandum of understanding between Punjab Police and The Exaa School System."
+            />
+          </Reveal>
+          <Reveal delay={80} className="mt-10">
+            <PoliceMouCard />
+          </Reveal>
         </div>
       </section>
     </>

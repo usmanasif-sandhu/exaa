@@ -20,7 +20,7 @@ import Reveal from '../components/Reveal'
 import TiltSurface from '../components/TiltSurface'
 import {
   brand,
-  events,
+  calendarHighlights,
   heroCarouselSlides,
   heroImage,
   programs,
@@ -293,15 +293,15 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Calendar"
                 title="Upcoming highlights"
-                subtitle="Swap dates and venues as soon as term plans are confirmed."
+                subtitle="Session 2026–27 academic dates and campus events — see the full calendar for every milestone."
               />
             </Reveal>
             <Reveal delay={80}>
               <Link
-                to="/contact"
+                to="/calendar"
                 className="group inline-flex items-center gap-2 rounded-lg border border-exaa-900/12 bg-exaa-50 px-4 py-2.5 text-sm font-semibold text-exaa-900 transition hover:border-accent-500/30 hover:bg-white"
               >
-                Sync with your campus
+                Full calendar
                 <ArrowRight
                   className="size-4 text-accent-700 transition duration-300 group-hover:translate-x-0.5"
                   aria-hidden
@@ -310,7 +310,7 @@ export default function Home() {
             </Reveal>
           </div>
           <ul className="mt-10 grid gap-4 md:grid-cols-3">
-            {events.map((e, i) => (
+            {calendarHighlights.map((e, i) => (
               <Reveal key={e.title} delay={i * 75}>
                 <li className="flex gap-4 rounded-xl border border-exaa-200/90 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-300/50 hover:bg-exaa-50">
                   <div className="flex w-[4.75rem] flex-col items-center justify-center rounded-lg border border-accent-500/25 bg-accent-600 py-3 text-center text-white shadow-sm">

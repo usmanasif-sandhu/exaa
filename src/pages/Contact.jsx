@@ -113,7 +113,7 @@ export default function Contact() {
                     </option>
                     {campuses.map((c) => (
                       <option key={c.slug} value={c.slug}>
-                        {c.city} · {c.area}
+                        {c.name ?? `${c.city} · ${c.area}`}
                       </option>
                     ))}
                   </select>

@@ -73,7 +73,21 @@ export default function Footer() {
               </li>
               <li className="flex gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-exaa-500" aria-hidden />
-                <span className="text-exaa-600">Main Campus Shadman Colony Gujrat</span>
+                <span className="text-exaa-600">
+                  Shadman Colony, Gujrat ·{' '}
+                  <a
+                    href="https://maps.app.goo.gl/7G9pXRyk1Tu7ZybV7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent-700 hover:underline"
+                  >
+                    Directions
+                  </a>
+                  {' · '}
+                  <a href="tel:+923319993209" className="text-exaa-800 hover:text-accent-800 hover:underline">
+                    0331-9993209
+                  </a>
+                </span>
               </li>
             </ul>
             <div className="mt-6 rounded-xl border border-exaa-200/90 bg-white/80 p-4 text-sm shadow-sm backdrop-blur-sm">

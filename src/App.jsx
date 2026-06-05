@@ -7,6 +7,7 @@ import Admissions from './pages/Admissions'
 import Campuses from './pages/Campuses'
 import StudentLife from './pages/StudentLife'
 import Contact from './pages/Contact'
+import Calendar from './pages/Calendar'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="campuses" element={<Campuses />} />
         <Route path="student-life" element={<StudentLife />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="calendar" element={<Calendar />} />
       </Route>
     </Routes>
   )
