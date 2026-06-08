@@ -640,10 +640,9 @@ export const admissionPolicy = {
         {
           title: 'Pre School',
           rows: [
-            { classLevel: 'Toddlers', minAge: '2 years', maxAge: '2 years' },
-            { classLevel: 'Playgroup', minAge: '2+ Years', maxAge: '2+ Years' },
-            { classLevel: 'Nursery', minAge: '3 Years', maxAge: '3 Years' },
-            { classLevel: 'Prep', minAge: '4 Years', maxAge: '5 Years' },
+            { classLevel: 'Jr. Montessori', minAge: '2+ Years', maxAge: '2+ Years' },
+            { classLevel: 'Sr. Montessori', minAge: '3 Years', maxAge: '3 Years' },
+            { classLevel: 'Advance Montessori', minAge: '4 Years', maxAge: '5 Years' },
           ],
         },
         {
@@ -686,11 +685,10 @@ export const admissionPolicy = {
       groups: [
         {
           title: 'Pre School',
-          rows: [
-            { classLevel: 'Toddlers', test: 'Interview' },
-            { classLevel: 'Playgroup', test: 'Interview' },
-            { classLevel: 'Nursery', test: 'Interview' },
-            { classLevel: 'Prep', test: 'Written Test + Interview' },
+          rows: [  
+            { classLevel: 'Jr. Montessori', test: 'Interview' },
+            { classLevel: 'Sr. Montessori', test: 'Interview' },
+            { classLevel: 'Advance Montessori', test: 'Written Test + Interview' },
           ],
         },
         {
