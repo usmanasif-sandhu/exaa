@@ -97,7 +97,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {brand.name}. All rights reserved.
           </p>
-          <p className="text-exaa-400">Powered By DevTorque</p>
+          <p className="text-exaa-400">Developed By Usman Asif Sandhu (0321-1161139) | DevTorque</p>
         </div>
       </div>
     </footer>
