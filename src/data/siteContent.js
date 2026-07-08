@@ -82,7 +82,7 @@ export const brand = {
   name: 'The Exaa School System',
   tagline: 'A national wake field',
   phone: '0331-9993209',
-  phoneTel: 'tel:+92533728614',
+  phoneTel: 'tel:+923319993209',
   email: 'myexaa@gmail.com',
   emailHref: 'mailto:myexaa@gmail.com',
   /** WhatsApp number (any common format); floating button uses wa.me after normalization. */
